@@ -1,0 +1,57 @@
+ {% extends 'base.html' %}
+ {% load static %} 
+ {% block container %}  
+  <main id="main">
+
+     <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>SPARQL Based <strong>Translation</strong></h2>
+        </div>
+        <form action="" method="post">
+        <div class="row">
+          <div class="col-lg">
+            <div class="icon-box" data-aos="fade-up">
+              <div class="icon"><i class="icofont-computer"></i></div>
+              <h4 class="title"><a href="">Put Your Language Here</a></h4>
+              <p class="description"><textarea name="first" id="first" placeholder="Enter First Language" rows="4" cols="50"></textarea></p>
+              <h5>Input Dialect:
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>No Specific Dialect</option>
+                    <option value="1">English</option>
+                    <option value="2">Gujarati</option>
+                    <option value="3">Hindi</option>
+                    <option value="4">Spanish</option>
+                  </select>
+                </h5>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
+              <h4 class="title"><a href="">See Your Output Language Result</a></h4>
+              <p class="description"><textarea name="second" id="second" placeholder="Enter Second Language" rows="4" cols="50" ></textarea></p>
+               <h5>Output Dialect:
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>No Specific Dialect</option>
+                   <option value="1">English</option>
+                    <option value="2">Gujarati</option>
+                    <option value="3">Hindi</option>
+                    <option value="4">Spanish</option>
+                  </select>
+                   <input type="submit" name="submit" value="Translation" />
+               </h5>
+            </div>             
+          </div> 
+                  
+        </div>
+       
+      </form>
+      </div>
+    </section><!-- End Services Section -->
+
+    
+  </main><!-- End #main -->
+{% endblock %}

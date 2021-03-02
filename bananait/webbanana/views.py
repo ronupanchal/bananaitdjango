@@ -11,4 +11,10 @@ def index(request):
 
 def ourteam(request):
     teams = TblTeam.objects.all()
-    return render(request, 'ourteam.html', {'teams': teams})
+    contacts = TblContact.objects.all()
+    return render(request, 'ourteam.html', {'contacts': contacts,'teams': teams})
+
+
+def translate(request):    
+    contacts = TblContact.objects.all()
+    return render(request, 'translation.html', {'contacts': contacts})

@@ -1,4 +1,4 @@
-   {% extends 'base.html' %}
+ {% extends 'base.html' %}
  {% load static %} 
  {% block container %}
   <main id="main">
@@ -10,7 +10,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>About</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
             <li>About</li>
           </ol>
         </div>
@@ -94,7 +94,7 @@
       </div>
     </section><!-- End Our Team Section -->
 
-    <!-- ======= Our Skills Section ======= -->
+    {% comment %} <!-- ======= Our Skills Section ======= -->
     <section id="skills" class="skills">
       <div class="container">
 
@@ -222,7 +222,7 @@
         </div>
 
       </div>
-    </section><!-- End Our Clients Section -->
+    </section><!-- End Our Clients Section --> {% endcomment %}
 
   </main><!-- End #main -->
 {% endblock %}

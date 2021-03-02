@@ -5,4 +5,5 @@ from webbanana import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('ourteam/', views.ourteam, name='ourteam'),
+    path('translation/', views.translate, name='translate'),
 ]
