@@ -14,13 +14,13 @@
           <li class="drop-down"><a href="">About</a>
             <ul>
               <li><a href="aboutbananait.html">Banana IT</a></li>
-              <li class="drop-down"><a href="{% url 'ourteam' %}">Out Team</a>
-                <ul>
-                  <li><a href="ceo.html">CEO &amp; Founder</a></li>
-                  <li><a href="ourdeveloper.html">Our Developer</a></li>                 
-                </ul>
+              <li><a href="{% url 'ourteam' %}">Out Team</a>
+                {% comment %} <ul>
+                  <li><a href="{% url 'ourteam' %}">CEO &amp; Founder</a></li>
+                  <li><a href="{% url 'ourteam' %}">Our Developer</a></li>                 
+                </ul> {% endcomment %}
               </li>
-              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="{% url 'testimonial' %}">Testimonials</a></li>
               <li><a href="#">Blog</a></li>              
             </ul>
           </li>         

@@ -44,8 +44,9 @@ class TblTeam(models.Model):
     """Model representing a name of team member (e.g. Ronak Panchal)."""
     name = models.CharField(max_length=100, help_text="Enter a name (e.g. Ronak Panchal)")
     """Model representing a designation of team member (e.g. Software Engineer)."""
-    designation = models.CharField(max_length=100, help_text="Enter a designation (e.g. Web Designer)"
-        )  
+    designation = models.CharField(max_length=100, help_text="Enter a designation (e.g. Web Designer)")
+    """Model representing a qualification of team member (e.g. MCA, BTech)."""
+    qualification = models.TextField(max_length=100, help_text="Enter a qualification (e.g. MCA, BTech)") 
     """Model representing a facebook link (e.g. fb/ronak)."""
     social_fb = models.TextField(max_length=500, help_text="Enter a facebook link (e.g. fb/ronak)")
     
@@ -66,3 +67,18 @@ class TblTeam(models.Model):
         """String for representing the Model object (in Admin site etc.)"""
         return "%s" %(self.name)        
 
+
+class TblTestimonial(models.Model):
+    """Model representing a name of testimonial (e.g. Ronak Panchal)."""
+    title = models.CharField(max_length=100, help_text="Enter a name (e.g. Ronak Panchal)")
+    """Model representing a designation of team member (e.g. Software Engineer)."""
+    designation = models.CharField(max_length=100, help_text="Enter a designation (e.g. Web Designer)")  
+    """Model representing a designation of team member (e.g. Software Engineer)."""
+    description = models.TextField(max_length=500, help_text="Enter a description (e.g. Brief)")
+    """Model representing a photo of team member (e.g. .jpg)."""
+    photoimage = models.FileField(upload_to='testimonialphoto/')  # for creating file input
+       
+
+    def __str__(self):
+        """String for representing the Model object (in Admin site etc.)"""
+        return "%s" %(self.title)       

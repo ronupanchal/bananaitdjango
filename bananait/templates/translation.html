@@ -1,5 +1,6 @@
  {% extends 'base.html' %}
  {% load static %} 
+  {% load i18n %}
  {% block container %}  
   <main id="main">
 
@@ -11,9 +12,10 @@
           <h2>SPARQL Based <strong>Translation</strong></h2>
         </div>
         <form action="" method="post">
+        {% csrf_token %}
         <div class="row">
           <div class="col-lg">
-            <div class="icon-box" data-aos="fade-up">
+            <div class="icon-box" data-aos="fade-up">              
               <div class="icon"><i class="icofont-computer"></i></div>
               <h4 class="title"><a href="">Put Your Language Here</a></h4>
               <p class="description"><textarea name="first" id="first" placeholder="Enter First Language" rows="4" cols="50"></textarea></p>
@@ -32,7 +34,7 @@
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
               <h4 class="title"><a href="">See Your Output Language Result</a></h4>
-              <p class="description"><textarea name="second" id="second" placeholder="Enter Second Language" rows="4" cols="50" ></textarea></p>
+              <p class="description"><textarea name="second" id="second" placeholder="Enter Second Language" rows="4" cols="50" value="{{output}}" ></textarea></p>
                <h5>Output Dialect:
                   <select class="form-select" aria-label="Default select example">
                     <option selected>No Specific Dialect</option>
